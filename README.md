@@ -85,13 +85,54 @@ The objective is to transform a neglected plot into a thriving community garden 
 - Used a **Domain-Independent Planner** to generate optimal action sequences
 - Designed modular and flexible domain/problem files supporting multiple town layouts
 
----
+
 
 **Tools:** PDDL + Planner Engine
 
+
 ---
 
-## 4️⃣ Reinforcement Learning – Cliff Walking & The Gambler
+## 4️⃣ Agentic AI – LLM Multi-Agent System
+
+**Objective:**  
+Build a modern, agentic architecture using **LangGraph** to bridge LLM reasoning and custom AI algorithms.
+
+---
+
+### 🏗 Architecture Overview
+
+The system consists of three interacting agents:
+
+#### 🔹 Executor Agent
+- Uses custom AI implementations as callable tools  
+- Solves problems deterministically (e.g., A\* search cost computation)  
+- Acts as a symbolic ground-truth engine  
+
+#### 🔹 LLM Solver Agent
+- Attempts to solve the same problems using raw LLM reasoning  
+- Relies on prompt-based reasoning without deterministic search  
+
+#### 🔹 LLM Judge
+- Compares outputs from both agents  
+- Analyzes discrepancies  
+- Produces structured summaries of differences  
+- Evaluates reasoning quality and correctness  
+
+---
+
+### 🔹 Technical Highlights
+
+- Orchestrated multi-agent workflows using **LangGraph**
+- Implemented structured tool-calling pipelines
+- Integrated LLM providers (Gemini / Ollama)
+- Designed evaluation logic bridging symbolic and neural reasoning
+- Built modular agent graph architecture for extensibility
+- Enabled automated comparison between algorithmic and LLM-based solutions
+
+
+---
+
+## 5️⃣ Reinforcement Learning – Cliff Walking & The Gambler
 
 **Objective:**  
 Apply **Markov Decision Processes (MDPs)** and **Temporal-Difference Learning** to solve sequential decision-making and optimization problems.
@@ -137,54 +178,11 @@ The algorithm iteratively updates state-value estimates until reaching a stable 
 - Analyzed policy behavior under different reward structures
 - Structured experiments for reproducibility
 
----
-
 **Tools:**  
 Python • NumPy • Gymnasium (OpenAI Gym)
 
----
+--- 
 
----
-
-## 5️⃣ Agentic AI – LLM Multi-Agent System
-
-**Objective:**  
-Build a modern, agentic architecture using **LangGraph** to bridge LLM reasoning and custom AI algorithms.
-
----
-
-### 🏗 Architecture Overview
-
-The system consists of three interacting agents:
-
-#### 🔹 Executor Agent
-- Uses custom AI implementations as callable tools  
-- Solves problems deterministically (e.g., A\* search cost computation)  
-- Acts as a symbolic ground-truth engine  
-
-#### 🔹 LLM Solver Agent
-- Attempts to solve the same problems using raw LLM reasoning  
-- Relies on prompt-based reasoning without deterministic search  
-
-#### 🔹 LLM Judge
-- Compares outputs from both agents  
-- Analyzes discrepancies  
-- Produces structured summaries of differences  
-- Evaluates reasoning quality and correctness  
-
----
-
-### 🔹 Technical Highlights
-
-- Orchestrated multi-agent workflows using **LangGraph**
-- Implemented structured tool-calling pipelines
-- Integrated LLM providers (Gemini / Ollama)
-- Designed evaluation logic bridging symbolic and neural reasoning
-- Built modular agent graph architecture for extensibility
-- Enabled automated comparison between algorithmic and LLM-based solutions
-
----
----
 
 ## 🛠 Skills & Technologies
 
@@ -213,12 +211,14 @@ The system consists of three interacting agents:
 
 ## 📁 Repository Structure
 
-```bash
-/heuristic_search
-/AlphaBetaPrunning
-/Planning
-/RL_MDP
-/Agentic_Ai
+```
+.
+├── Heuristic_Search
+├── AlphaBetaPrunning
+├── Planning
+├── Agentic_Ai
+└── ReinforcementLearning_MDP
+
 ```
 ---
 ### 🎓 Academic Context
